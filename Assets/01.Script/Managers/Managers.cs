@@ -9,12 +9,15 @@ public class Managers : MonoBehaviour
 
 
     public InputManager _input =new InputManager();
+    ResourceManager _resource = new ResourceManager();
     void Start()
     {
         Init(); 
     }
 
     public static InputManager Input { get { return Instance._input; } }
+
+    public static ResourceManager Resource { get { return Instance._resource; } }
     void Update()
     {
         _input.OnUpdate();

@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        OnKeyboard();
         switch(_state)
         {
             case Define.State.Idle:
@@ -67,6 +68,7 @@ public class PlayerController : MonoBehaviour
     {
 
     }
+    GameObject prefab = null;
     void OnKeyboard()
     {
         Vector3 dir = Vector3.zero;
@@ -94,8 +96,15 @@ public class PlayerController : MonoBehaviour
             dir = Vector3.right * Time.deltaTime * _speed;
             transform.position += dir;
         }
+
+       
+        if(Input.GetKeyDown(KeyCode.Space))
+           prefab= Managers.Resource.Instantiate("Knight");
+        if(Input.GetKeyDown(KeyCode.V))
+            Managers.Resource.Destroy(prefab);
         if (dir != Vector3.zero)
             anim.SetFloat("Movement", dir.magnitude);
+
     }
 
     void OnMouseClicked(Define.MouseEvent evt)
