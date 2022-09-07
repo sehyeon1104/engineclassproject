@@ -6,15 +6,18 @@ public class Managers : MonoBehaviour
 {
     static Managers s_instance;
     static Managers Instance { get { Init(); return s_instance; } }
+
+
+    public InputManager _input =new InputManager();
     void Start()
     {
-        
+        Init(); 
     }
 
-    
+    public static InputManager Input { get { return Instance._input; } }
     void Update()
     {
-        
+        _input.OnUpdate();
     }
 
     static void Init()
@@ -26,7 +29,8 @@ public class Managers : MonoBehaviour
             {
                 go = new GameObject { name = "@Managers" };
             }
-            DontDestroyOnLoad(go);
+            DontDestroyOnLoad(go);  
+            s_instance = go.AddComponent<Managers>();
         }
     }
 }
