@@ -10,6 +10,12 @@ public class Define
         Login,
         Game,
     }
+    public enum Sound
+    {
+        Bgm,
+        Effect,
+        MaxCount,
+    }
     public enum State
     {
         Idle,

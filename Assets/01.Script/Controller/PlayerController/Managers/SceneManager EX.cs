@@ -12,7 +12,7 @@ public class SceneManagerEX
     {
         
 
-        SceneManager.LoadScene(GetSceneName(type);
+        SceneManager.LoadScene(GetSceneName(type));
     }
 
     string GetSceneName(Define.Scene type)
