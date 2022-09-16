@@ -23,8 +23,8 @@ public class GameScene : BaseScene
         }
         for(int i = 0; i < 5;++i)
         {
-            Managers.Resource.Destroy(list[i]);
-            list.RemoveAt(i);
+            Managers.Resource.Destroy(list[0]);
+            list.RemoveAt(0);
         }
 
         for(int i=0; i<2; i++)
