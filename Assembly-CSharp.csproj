@@ -71,7 +71,11 @@
     <Compile Include="Assets\Scripts\Scenes\LoginScene.cs" />
     <Compile Include="Assets\Scripts\Managers\Poolable.cs" />
     <Compile Include="Assets\Scripts\Managers\PoolManager.cs" />
-    <Compile Include="Assets\Scripts\UI\UI_Button.cs" />
+    <Compile Include="Assets\Resources\Prefabs\UI\UI_Base.cs" />
+    <Compile Include="Assets\Resources\Prefabs\UI\Popup\UI_Popup.cs" />
+    <Compile Include="Assets\Resources\Prefabs\UI\Scene\UI_SCeme.cs" />
+    <Compile Include="Assets\Resources\Prefabs\UI\Popup\UI_Button.cs" />
+    <Compile Include="Assets\Resources\Prefabs\UI\Util.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Resources\Art\UnityChan\Shader\Unitychan_chara_fuku.shader" />
