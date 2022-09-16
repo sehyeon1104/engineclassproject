@@ -57,6 +57,11 @@ public class PoolManager
                 poolable = _poolStack.Pop();
             else 
                 poolable=Create();
+            poolable.gameObject.SetActive(true);
+
+            //DontDestroyLoad «ÿ¡¶ 
+            if (parent == null)
+                poolable.transform.parent = Managers.Scene.CurrentScene.transform;
 
             poolable.transform.parent = parent;
             poolable.isUsing = true;
@@ -95,6 +100,7 @@ public class PoolManager
             GameObject.Destroy(poolable.gameObject);
             return;
         }
+
         _pool[name].Push(poolable);
 
        
